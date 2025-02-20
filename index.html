@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown List Component Case Study</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Dropdown List Component Case Study</h1>
+    </header>
+    <main>
+      <h3> Welcome to my exploration of dropdown lists! 
+        This case study dives into how dropdown menus can be designed to be more user-friendly and inclusive. 
+        We'll look at how different input methods (like mouse, keyboard, and touch) interact with dropdowns across various applications, 
+        and how these components visually and textually represent their states. 
+        You'll see how we can redesign dropdowns to balance ease of use, efficiency, and accessibility, making them better for everyone (or almost everyone!). 
+        Join me on this journey to make dropdown lists more accessible and enjoyable for all users! 🚀 </h3>
+      
+      <details>
+        <summary>Part 1: Input</summary>
+        <section>
+          <p> Welcome to our interactive playground, where every click, swipe, and hover brings your digital experience to life! 🌟
+            <br>
+            This website is designed to be more than just a collection of pages — it's a dynamic journey where inputs and outputs work together to create an enjoyable experience. <br>
+            We will explore how different platforms implement a well known component - a dropdown list - in different, yet similar ways!</p>
+          <label for="component-select">Choose a component to look at:</label>
+          <select id="component-select">
+            <option value="google-sheets">Google Sheets</option>
+            <option value="slack">Slack</option>
+            <option value="file-explorer">File Explorer</option>
+          </select>
+          <div id="component-content">
+          </div>
+          <div id="general-reflection">
+            <h3>General Feedback/Reflection</h3>
+  <table>
+  <tr>
+    <th>Aspect</th>
+    <th>Google Sheets</th>
+    <th>Slack</th>
+    <th>File Explorer</th>
+  </tr>
+  <tr>
+    <td>Process of Interacting</td>
+    <td>Initial navigation to the dropdown menu is tricky, but once there, it's easy to use.</td>
+    <td>Navigation is less intuitive but functional with keyboard shortcuts.</td>
+    <td>Most accessible and user-friendly with both mouse and keyboard.</td>
+  </tr>
+  <tr>
+    <td>Functions</td>
+    <td>Can navigate, select, and close the menu with keyboard shortcuts.</td>
+    <td>Similar functions but less intuitive navigation.</td>
+    <td>Comprehensive navigation and selection with keyboard shortcuts.</td>
+  </tr>
+  <tr>
+    <td>Learnability, Memorability, Efficiency</td>
+    <td>Moderate learnability and efficiency once familiar with navigation.</td>
+    <td>Lower learnability due to less intuitive shortcuts but functional.</td>
+    <td>High learnability, memorability, and efficiency with intuitive navigation.</td>
+  </tr>
+</table>
+<h3>Visual Representation of Inputs</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Interaction Method</th>
+                <th>Google Sheets</th>
+                <th>Slack</th>
+                <th>File Explorer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mouse/Touchpad</td>
+                <td>
+                  <ul>
+                    <li>Easy to click and select</li>
+                    <li>Options are clearly visible</li>
+                    <li>Hover highlights (greys out) options</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Simple click to open and select</li>
+                    <li>Options are clearly visible</li>
+                    <li>Hover outlines the selected options</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Very accessible</li>
+                    <li>Easy to use</li>
+                    <li>Options are clearly visible</li>
+                    <li>Hover does not highlight options</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Keyboard</td>
+                <td>
+                  <ul>
+                    <li>Tab + arrows to navigate. Quite difficult to get to the part where using the keyboard is possible</li>
+                    <li>Enter to select - works very well</li>
+                    <li>Esc to close or exit</li>
+                    <li>Initial navigation is very tricky</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Fn6 to navigate, works well but maybe not the best combination of keys (Fn and F6 are far on the keyboard), making it less accessible.</li>
+                    <li>Arrows to navigate left/right, can go back</li>
+                    <li>Enter to select</li>
+                    <li>Esc to close</li>
+                    <li>Less intuitive, but works as long as the user knows which keys to press</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Tab + arrows to navigate</li>
+                    <li>Enter to select</li>
+                    <li>Esc to close</li>
+                    <li>Comprehensive navigation, very easy and comprehensive </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Touch</td>
+                <td>
+                  <ul>
+                    <li>Tapping to open</li>
+                    <li>Swipe to scroll, click to open options, no hover</li>
+                    <li>Tap to select options</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Tapping to open</li>
+                    <li>Swipe to scroll, different layout, so no clear dropdown lists</li>
+                    <li>Tap to select options</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Not available for phone (touch) use</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </details>
+      <details>
+        <summary>Part 2: Output</summary>
+        <section>
+          <p>
+            In Part 2 of our adventure, we'll dive deeper into the interactions and explore how visual styles like color, opacity, and appearances enhance our experience. 
+            We'll also uncover hidden outputs like alt text and component names, which are revealed by screen readers, ensuring accessibility for all users.
+          </p>
+          <h3>Output</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Application</th>
+                <th>Visual Style</th>
+                <th>Screen Reader</th>
+                <th>Hidden Outputs</th>
+                <th>Focus Order (Logical Sequence)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Docs</td>
+                <td>Color change, highlight (greys out) on hover and press</td>
+                <td>A very uncomfortable experience. It was very hard to get to the menu bar, and the narrator would read out things that are not relevant. 
+                  There is also a conflict between narrator's shortcuts and Google Docs', so I was unable to move using the keyboard becasue the narrator just read words letter by letter when Tab was pressed instead of moving to the next item. </td>
+                <td>Alt text, component names read outloud</td>
+                <td>Tab -> Enter -> Arrow keys -> Enter -> Tab</td>
+              </tr>
+              <tr>
+                <td>Slack</td>
+                <td>Opacity, border thickness change</td>
+                <td>Moderate experience, as long as the person already knows the shortcuts and keys that need to be pressed. 
+                  The narrator is not the best and not the most intuitive but helps navigate.</td>
+                <td>Alt text</td>
+                <td>Fn6 -> Enter -> Arrow keys -> Enter -> Tab</td>
+              </tr>
+              <tr>
+                <td>File Explorer</td>
+                <td>Color change, highlight on hover</td>
+                <td>The most comfortable experience. Not ideal as navigating is still not easy but there are no conflicts and the narrator just read what is being pressed. 
+                  I was able to get to the same point as with a mouse the fastest using just screenreader and not looking at the screen.</td>
+                <td>Alt text, component names</td>
+                <td>Tab -> Enter -> Arrow keys -> Enter -> Tab</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </details>
+      <details>
+        <summary>Part 3: State Models</summary>
+        <section>
+          <h3>State Models for Slack</h3>
+          <p>
+            We're taking our exploration to the next level by diving into the world of state models and user interactions.
+            Using the insights you've gathered about interactions and accessibility from Parts 1 and 2, it's time to create your own version of a selected component. 
+            We'll start by thinking about the different states it can be in and how users interact with it.
+          </p>
+          <p>
+            First, we'll create two state models to visualize these interactions:
+          </p>
+          <ul>
+            <li>How does the component respond to clicks, hovers, and other mouse actions?</li>
+            <li>How does the component handle focus, key presses, and other keyboard interactions?</li>
+          </ul>
+          <div class="state-models">
+            <div class="state-column">
+              <h4>Mouse User State Model</h4>
+              <img src="pics/mouse.png" alt="Mouse User State Model Initial" class="expandable-image" />
+              <img src="pics/mouse_new.png" alt="Mouse User State Model Revised" class="expandable-image" />
+
+            </div>
+            <div class="state-column">
+              <h4>Keyboard User State Model</h4>
+             <img src="pics/keyboard.png" alt="Keyboard User State Model Initial" class="expandable-image" />
+              <img src="pics/keyboard_new.png" alt="Keyboard User State Model Revised" class="expandable-image" />
+            </div>
+          </div>
+          <p>
+            Next, we'll be revising state models. 
+            We will make an intentional trade-off to alter how we perceive the learnability, memorability, 
+            efficiency, and accessibility of the dropdown component.
+          </p>
+          <div class="state-models">
+            <div class="state-column">
+              <h4>Idle State</h4>
+<img src="pics/slack_idle.png" alt="Slack Idle State" class="expandable-image" />
+            </div>
+            <div class="state-column">
+              <h4>Selected Dropdown List</h4>
+              <img src="pics/slack_state1.png" alt="Slack Selected Dropdown List" class="expandable-image" />
+
+            </div>
+            <div class="state-column">
+              <h4>Improved Version with Trade-off</h4>
+              <img src="pics/slack_ann.png" alt="Slack Improved Version with Trade-off" class="expandable-image" />
+            </div>
+          </div>
+          <h3>Trade Off Idea</h3>
+          <p>
+            In Slack (and many other applications/websites), the learnability and intuitiveness of navigating dropdown lists without using a mouse are not great. 
+            It is difficult to understand what is clickable/expandable and with which keys. <br>
+            To improve this, I propose the following trade-off:
+            <li>When a key is pressed (say, Fn6 in Slack to get started with mouse-less use), every other icon that can be accessed by pressing Fn6 is highlighted in the same color. Icons that aren’t accessible by Fn6, such as the dropdown menu, would display a hint in gray indicating the appropriate button to use. This approach improves learnability and usability but relies on color, which might be less effective for visually impaired users and could take longer to learn and adjust to.
+</li>
+<li>For mouse users, I would implement a feature similar to what Spotify already has—when hovering over an option, the “shortcut” or accessible way of getting there is displayed. This also improves learnability for users who might need to navigate without a mouse.
+</li>
+This trade off can (and is, in my model) be applied to a broader design: rather than just using it for the dropdown lists only, it can be used for the whole interface. It will make the user experience much better.
+          </p>
+        </section>
+      </details>
+      <details>
+        <summary>Part 4: Reflection</summary>
+        <section>
+          <details>
+            <summary>
+              Usability and Accessibility of Observed Components
+            </summary>
+            <div class="component-reflection">
+              <h5>Google Sheets</h5>
+              <p>
+                <strong>Usability:</strong> Once the dropdown menu is accessed,
+                it is easy to navigate and use.
+              </p>
+              <p>
+                <strong>Accessibility:</strong> Keyboard shortcuts are
+                available, but initial navigation is tricky.
+              </p>
+              <p>
+                <strong>Application to Design:</strong> In my design, I ensured
+                that keyboard shortcuts are clearly indicated and easy to use,
+                improving initial navigation.
+              </p>
+            </div>
+            <div class="component-reflection">
+              <h5>Slack</h5>
+              <p>
+                <strong>Usability:</strong> Functional with keyboard shortcuts,
+                but less intuitive.
+              </p>
+              <p>
+                <strong>Accessibility:</strong> Navigation is possible but not
+                straightforward.
+              </p>
+              <p>
+                <strong>Application to Design:</strong> I proposed highlighting
+                accessible icons and providing hints for non-accessible
+                elements, making navigation more intuitive.
+              </p>
+            </div>
+            <div class="component-reflection">
+              <h5>File Explorer</h5>
+              <p>
+                <strong>Usability:</strong> Highly accessible and user-friendly
+                with both mouse and keyboard.
+              </p>
+              <p>
+                <strong>Accessibility:</strong> Comprehensive navigation and
+                selection with keyboard shortcuts.
+              </p>
+              <p>
+                <strong>Application to Design:</strong> I aimed to replicate the
+                intuitive navigation and comprehensive keyboard support in my
+                design.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Addressing Unaddressed Accessibility Considerations
+            </summary>
+            <p>
+              <strong>Color Dependence:</strong> My design initially relied on
+              color to indicate accessibility, which could be problematic for
+              visually impaired users. To address this, I included text hints
+              and tooltips to provide additional guidance.
+            </p>
+            <p>
+              <strong>Screen Reader Support:</strong> Ensuring that all
+              interactive elements are properly labeled and announced by screen
+              readers was a key consideration that I incorporated into my
+              design.
+            </p>
+          </details>
+          <details>
+            <summary>Solving for a "Mismatch"</summary>
+            <p>
+              <strong>Mismatch Definition:</strong> A mismatch occurs when the
+              design of a product does not meet the needs of its users, creating
+              barriers to use.
+            </p>
+            <p>
+              <strong>Solving the Mismatch:</strong> By highlighting accessible
+              icons and providing hints for non-accessible elements, my design
+              addresses the mismatch of unclear navigation for keyboard users.
+              This change makes it easier for users to understand and use the
+              dropdown menu without a mouse, improving overall accessibility.
+            </p>
+          </details>
+          <details>
+            <summary>Impact of Accessibility on Users with Impairments</summary>
+            <div class="impact-container">
+              <div class="impact-section positive-impact">
+                <h4>Positive Impact</h4>
+                <p><strong>Keyboard Navigation in File Explorer:</strong></p>
+                <p>
+                  <strong>Impact:</strong> Users with motor impairments can
+                  navigate and select options using only the keyboard, making
+                  the application more accessible.
+                </p>
+                <p>
+                  <strong>Example:</strong> A user with limited hand mobility
+                  can efficiently use the dropdown menu without needing precise
+                  mouse movements.
+                </p>
+                <p><strong>Screen Reader Announcements in Slack:</strong></p>
+                <p>
+                  <strong>Impact:</strong> Users with visual impairments can
+                  understand the current state and options of the dropdown menu
+                  through screen reader announcements.
+                </p>
+                <p>
+                  <strong>Example:</strong> A user who is blind can navigate and
+                  select options in the dropdown menu with the help of clear
+                  audio feedback.
+                </p>
+              </div>
+              <div class="impact-section negative-impact">
+                <h4>Negative Impact</h4>
+                <p><strong>Color-Dependent Indicators in Slack:</strong></p>
+                <p>
+                  <strong>Impact:</strong> Users with color vision deficiencies
+                  may struggle to distinguish between accessible and
+                  non-accessible elements.
+                </p>
+                <p>
+                  <strong>Example:</strong> A user with red-green color
+                  blindness may not be able to see the highlighted icons, making
+                  navigation difficult.
+                </p>
+                <p>
+                  <strong>Complex Keyboard Shortcuts in Google Sheets:</strong>
+                </p>
+                <p>
+                  <strong>Impact:</strong> Users with cognitive impairments may
+                  find it challenging to remember and use complex keyboard
+                  shortcuts.
+                </p>
+                <p>
+                  <strong>Example:</strong> A user with a learning disability
+                  may struggle to navigate the dropdown menu due to the
+                  difficulty in remembering the required key combinations.
+                </p>
+              </div>
+            </div>
+          </details>
+          <details>
+            <summary>Prioritization of User Groups in Component Design</summary>
+            <p>
+              <strong>Commonly Prioritized Users:</strong> Mouse Users: Often
+              prioritized due to the prevalence of mouse-based interactions in
+              desktop applications. This can lead to highly intuitive and
+              efficient mouse interactions but may neglect the needs of
+              keyboard, touch/mobile, and screen reader users.
+            </p>
+            <p><strong>Impact on User Experience:</strong></p>
+            <ul>
+              <li>
+                <strong>Keyboard Users:</strong> May experience less intuitive
+                navigation if keyboard shortcuts are not well-documented or easy
+                to use.
+              </li>
+              <li>
+                <strong>Touch/Mobile Users:</strong> May face challenges if
+                touch targets are not optimized for mobile interactions.
+              </li>
+              <li>
+                <strong>Screen Reader Users:</strong> May struggle with
+                accessibility if interactive elements are not properly labeled
+                or announced.
+              </li>
+            </ul>
+          </details>
+        </section>
+      </details>
+    </main>
+    <footer>
+      <p>&copy; 2025 Julia Stepanenko!</p>
+      <h6>Credits: Accessible Components Handout, CS1300 Accessibility Guide, Wednesday 4-5.20pm Critique friends, Pranavi Lakshminarayanan, Bohdan Karavan, EdStem, Artificial Inteligence for brainstorming design ideas.</h6>
+    </footer>
+      <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+        <script src="script.js"></script>
+
+  </div>
+  </body>
+</html>

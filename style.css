@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif; /* Fun, easy-to-read font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 20px;
+  margin: 10px;
+}
+
+header {
+  background-color: #611f69; /* Aubergine Null */
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #296543;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #7c3085; /* Aubergine Active */
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #611f69; /* Aubergine Null */
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.gif-container div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.gif-container img {
+  max-width: 100%; /* Ensure the images do not exceed the container width */
+  max-height: 900px; /* Set a maximum height */
+  object-fit: contain; /* Ensure the images fit within the specified size without being cut off */
+  border-radius: 15px;
+  padding: 10px;  
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gif-container img:hover {
+  transform: scale(1.1);
+}
+
+
+.pause-button {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.gif-container:hover .pause-button {
+  display: block;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+body {
+  font-size: 20px;
+}
+
+th, td {
+  width: 20%; /* Adjust the percentage as needed */
+  padding: 8px;
+  text-align: left;
+}
+.state-models {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.state-column {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.state-column img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #611f69; /* Aubergine Null */
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.component-reflection {
+  margin-bottom: 30px;
+}
+
+.impact-section {
+  margin-bottom: 20px;
+}
+
+h5 {
+  color: #16516a; /* Blue */
+  margin-top: 10px;
+  font-size: larger;
+}
+
+strong {
+  color: #007a5a; /* Green (Accessible) */
+}
+
+/* Styles for dropdowns */
+details {
+  margin-bottom: 20px;
+}
+
+summary {
+  font-size: 1.25em; /* Larger font size for dropdowns */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* details[open] summary {
+  font-size: 1.5em; /* Even larger font size when open */
+} */
+
+details > p,
+details > div {
+  padding-left: 20px; /* Indent content within dropdowns */
+}
+
+.impact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.impact-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  min-width: 100%;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.blurred-image {
+  filter: blur(10px);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+  display: block;
+  width: 100%; 
+  height: auto; 
+  filter: blur(5px);
+  cursor: pointer;
+}
+
+.blurred-image.revealed {
+  filter: none;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block; 
+
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  pointer-events: none;
+  text-align: center;
+}
+
+
+footer h6 {
+  margin: 0px 0 0;
+  font-size: 14px;
+  color: #f1f1f1; 
+}
+/* slack colors:
+Aubergine: Slack's primary color
+Aubergine Null: #611F69, used for zero states on the web
+Aubergine Active: #7C3085, used for hover states on the web
+Blue: #36C5F0, the brand color for blue
+Blue (Accessible): #1264A3, used for blue text links on a white background
+Green: #2EB67D, the brand color for green
+Green (Accessible): #007A5A, used for success states on the web
+Red: #E01E5A, the brand color for red*/
