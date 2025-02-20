@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="gif-container">
             <div class="image-wrapper">
               <h3>Standard Interaction</h3>
-              <img src="pics/googledoc.gif" alt="Google Sheets Standard Interaction" class="blurred-image expandable-image">
+              <img src="pics/googledoc.gif" alt="Google Sheets Standard Interaction gif. The whole process of using a mouse. Click to reveal." class="blurred-image expandable-image">
               <div class="overlay">Click to reveal</div>
             </div>
             <div class="image-wrapper">
               <h3>Accessible Interaction</h3>
-              <img src="pics/googledoc_acc.gif" alt="Google Sheets Accessible Interaction" class="blurred-image expandable-image">
+              <img src="pics/googledoc_acc.gif" alt="Google Sheets Accessible Interaction. The whole process of using a keyboard only. Click to reveal" class="blurred-image expandable-image">
   <div class="overlay">Click to reveal</div>
             </div>
           </div>
@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="gif-container">
             <div class="image-wrapper">
               <h3>Standard Interaction</h3>
-              <img src="pics/slack.gif" alt="Slack Standard Interaction" class="blurred-image expandable-image">
+              <img src="pics/slack.gif" alt="Slack Standard Interaction. The whole process of using a mouse. Click to reveal" class="blurred-image expandable-image">
               <div class="overlay">Click to reveal</div>
             </div>
             <div class="image-wrapper">
               <h3>Accessible Interaction</h3>
-              <img src="pics/slack_acc.gif" alt="Slack Accessible Interaction" class="blurred-image expandable-image">
+              <img src="pics/slack_acc.gif" alt="Slack Accessible Interaction. The whole process of using keyboard keys only. Click to reveal" class="blurred-image expandable-image">
               <div class="overlay">Click to reveal</div>
             </div>
           </div>
@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="gif-container">
             <div class="image-wrapper">
               <h3>Standard Interaction</h3>
-              <img src="pics/explorer.gif" alt="File Explorer Standard Interaction" class="blurred-image expandable-image">
+              <img src="pics/explorer.gif" alt="File Explorer Standard Interaction. The whole process of using a mouse. Click to reveal" class="blurred-image expandable-image">
               <div class="overlay">Click to reveal</div>
             </div>
             <div class="image-wrapper">
               <h3>Accessible Interaction</h3>
-              <img src="pics/explorer_acc.gif" alt="File Explorer Accessible Interaction" class="blurred-image expandable-image">
+              <img src="pics/explorer_acc.gif" alt="File Explorer Accessible Interaction. The whole process of using keyboard keys only. Click to reveal" class="blurred-image expandable-image">
               <div class="overlay">Click to reveal</div>
             </div>
           </div>
@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     componentContent.innerHTML = content;
 
-    // Add the reveal functionality for blurred images
     const blurredImages = document.querySelectorAll(".blurred-image");
 
     blurredImages.forEach((image) => {
@@ -117,6 +116,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Trigger change event to load initial content
   componentSelect.dispatchEvent(new Event("change"));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const images = document.querySelectorAll(".expandable-image");
+  const closeBtn = document.querySelector(".close");
+
+  images.forEach((image) => {
+    image.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 });
